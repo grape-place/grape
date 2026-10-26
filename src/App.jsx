@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { siteConfig } from './config'
 
 const steps = [
@@ -50,6 +50,15 @@ function App() {
     window.setTimeout(() => setNotice(false), 3600)
   }
 
+  useEffect(() => {
+    const initialiseTally = () => window.Tally?.loadEmbeds?.()
+    initialiseTally()
+
+    const tallyScript = document.querySelector('script[src="https://tally.so/widgets/embed.js"]')
+    tallyScript?.addEventListener('load', initialiseTally)
+    return () => tallyScript?.removeEventListener('load', initialiseTally)
+  }, [])
+
   return (
     <div id="top">
       <header className="site-header page-shell">
@@ -59,7 +68,14 @@ function App() {
         </button>
         <nav id="main-nav" className={menuOpen ? 'open' : ''} aria-label="Main navigation">
           <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
-          <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
+          <button
+            type="button"
+            className="contact-trigger"
+            data-tally-open="kbbGJr"
+            data-tally-emoji-text="👋"
+            data-tally-emoji-animation="wave"
+            onClick={() => setMenuOpen(false)}
+          >Contact</button>
           <EventButton compact onComingSoon={showNotice} />
         </nav>
       </header>
@@ -119,24 +135,6 @@ function App() {
           </div>
         </section>
 
-        <section className="contact" id="contact" aria-labelledby="contact-heading">
-          <div className="page-shell contact-grid">
-            <div>
-              <span className="eyebrow">Say hello</span>
-              <h2 id="contact-heading">Let’s start a conversation.</h2>
-              <p>Have a question, an idea, or want to hear about future events? Drop us a note.</p>
-            </div>
-            <form name="grape-contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thanks.html">
-              <input type="hidden" name="form-name" value="grape-contact" />
-              <p className="hidden-field"><label>Don’t fill this out: <input name="bot-field" /></label></p>
-              <label>Name<input name="name" type="text" autoComplete="name" required /></label>
-              <label>Email<input name="email" type="email" autoComplete="email" required /></label>
-              <label className="full">Message<textarea name="message" rows="5" required /></label>
-              <p className="consent full">By sending this form, you agree that Grape may use these details to reply to your message. Your information won’t be shared or used for unrelated marketing.</p>
-              <button className="event-button full" type="submit">Send message <ArrowIcon /></button>
-            </form>
-          </div>
-        </section>
       </main>
 
       <footer className="page-shell"><Logo /><p>Good conversations. Great connections.</p><a href="#top">Back to top ↑</a></footer>

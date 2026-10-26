@@ -24,4 +24,4 @@ Business links, founder placeholders and shared copy are in `src/config.js`. Rep
 
 ## Netlify
 
-The included `netlify.toml` builds with `npm run build` and publishes `dist`. Import the repository in Netlify and deploy with the detected settings. The contact form includes Netlify-compatible static form detection.
+The included `netlify.toml` builds with `npm run build` and publishes `dist`. Import the repository in Netlify and deploy with the detected settings.

@@ -1,6 +1,5 @@
 export const siteConfig = {
   lumaEventsUrl: '#upcoming-events',
-  contactEmail: 'hello@example.com',
   founders: [
     { name: 'Founder name', title: 'Co-founder', linkedinUrl: '#' },
     { name: 'Founder name', title: 'Co-founder', linkedinUrl: '#' },
