@@ -3,13 +3,13 @@ export const siteConfig = {
   founders: [
     {
       name: 'Beth Croft',
-      title: 'Co-founder',
+      title: 'Founder - Endorsr',
       image: '/founders/beth-croft.png',
       linkedinUrl: 'https://www.linkedin.com/in/beth-croft-b57baa113/',
     },
     {
       name: 'Manoj Vadavat',
-      title: 'Co-founder',
+      title: 'Principal Consultant - Star Variance',
       image: '/founders/manoj-vadavat.png',
       linkedinUrl: 'https://www.linkedin.com/in/manojvadavat/',
     },

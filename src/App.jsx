@@ -124,16 +124,19 @@ function App() {
             <h2 id="about-heading">Networking that feels like a good conversation.</h2>
             <p>No travel, crowded rooms or awkward introductions. Join from anywhere in Australia and meet professionals in small, facilitated breakout rooms. Rotate between groups, share experiences and make meaningful connections — all in just one hour.</p>
           </div>
-          <div className="founders" aria-label="Grape founders">
-            {siteConfig.founders.map((founder, index) => (
-              <article className="founder-card" key={index}>
-                <div className="founder-photo">
-                  <img src={founder.image} alt={`${founder.name}, ${founder.title} of Grape`} />
-                </div>
-                <div><h3>{founder.name}</h3><p>{founder.title}</p></div>
-                <a href={founder.linkedinUrl} target="_blank" rel="noreferrer" aria-label={`LinkedIn profile for ${founder.name}`}>in</a>
-              </article>
-            ))}
+          <div className="founders-wrap">
+            <h3>Your Hosts</h3>
+            <div className="founders" aria-label="Grape hosts">
+              {siteConfig.founders.map((founder, index) => (
+                <article className="founder-card" key={index}>
+                  <div className="founder-photo">
+                    <img src={founder.image} alt={`${founder.name}, ${founder.title}`} />
+                  </div>
+                  <div><h3>{founder.name}</h3><p>{founder.title}</p></div>
+                  <a href={founder.linkedinUrl} target="_blank" rel="noreferrer" aria-label={`LinkedIn profile for ${founder.name}`}>in</a>
+                </article>
+              ))}
+            </div>
           </div>
         </section>
 
