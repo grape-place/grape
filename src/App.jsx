@@ -135,6 +135,28 @@ function App() {
           </div>
         </section>
 
+        <section className="closing-cta page-shell" aria-labelledby="closing-cta-heading">
+          <svg className="cta-doodle cta-bubble" viewBox="0 0 110 82" aria-hidden="true">
+            <path d="M15 10h69c9 0 16 7 16 16v21c0 9-7 16-16 16H49L29 76l5-13H15C6 63 1 56 1 47V26c0-9 5-16 14-16Z" />
+            <circle cx="34" cy="37" r="3" /><circle cx="50" cy="37" r="3" /><circle cx="66" cy="37" r="3" />
+          </svg>
+          <svg className="cta-doodle cta-rays" viewBox="0 0 70 70" aria-hidden="true">
+            <path d="M34 5v19M7 18l15 14M62 18 47 32" />
+          </svg>
+          <div className="closing-cta-content">
+            <h2 id="closing-cta-heading">Got something on your mind?</h2>
+            <p>A question, an idea, or just want to say hello? We'd love to hear from you.</p>
+            <button
+              type="button"
+              className="event-button"
+              data-tally-open="kbbGJr"
+              data-tally-emoji-text="👋"
+              data-tally-emoji-animation="wave"
+            >Say hello <ArrowIcon /></button>
+            <small>Good conversations start somewhere!</small>
+          </div>
+        </section>
+
       </main>
 
       <footer className="page-shell"><Logo /><p>Good conversations. Great connections.</p><a href="#top">Back to top ↑</a></footer>
