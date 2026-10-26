@@ -28,7 +28,7 @@ function EventButton({ compact = false, onComingSoon }) {
     }
   }
   return (
-    <a className={`event-button ${compact ? 'compact' : ''}`} href={siteConfig.lumaEventsUrl} onClick={handleClick}>
+    <a className={`event-button ${compact ? 'compact' : ''}`} href={siteConfig.lumaEventsUrl} target="_blank" rel="noreferrer" onClick={handleClick}>
       See upcoming events <ArrowIcon />
     </a>
   )
