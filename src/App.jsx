@@ -2,8 +2,8 @@ import { useState } from 'react'
 import { siteConfig } from './config'
 
 const steps = [
-  { title: 'Register', body: 'Choose a Grape event that interests you.', position: 'left' },
-  { title: 'Connect', body: 'Join small, facilitated group conversations (3 people per room).', position: 'center' },
+  { title: 'Register', body: 'Choose a free online networking event and register.', position: 'left' },
+  { title: 'Connect', body: 'Meet others per breakout room, then rotate into new groups.', position: 'center' },
   { title: 'Continue', body: 'Stay in touch and grow your network beyond the event.', position: 'right' },
 ]
 
@@ -73,7 +73,7 @@ function App() {
             <EventButton onComingSoon={showNotice} />
             <div className="event-note">
               <svg viewBox="0 0 60 56" aria-hidden="true"><path d="M52 46C22 49 13 35 16 13M16 13l-8 12M16 13l7 12" /></svg>
-              <span>Free events<br />every two months</span>
+              <span>networking sessions<br />through the year</span>
               <i aria-hidden="true" />
             </div>
           </div>
@@ -106,7 +106,7 @@ function App() {
           <div className="about-copy">
             <span className="eyebrow">Meet with meaning</span>
             <h2 id="about-heading">Networking that feels like a good conversation.</h2>
-            <p>Grape is an online event series built for people who want to meet beyond the usual small talk. Each gathering creates space for thoughtful prompts, diverse perspectives and the kind of connection that can keep growing long after the call ends.</p>
+            <p>No travel, crowded rooms or awkward introductions. Join from anywhere in Australia and meet professionals in small, facilitated breakout rooms. Rotate between groups, share experiences and make meaningful connections — all in just one hour.</p>
           </div>
           <div className="founders" aria-label="Grape founders">
             {siteConfig.founders.map((founder, index) => (

@@ -6,7 +6,7 @@ export const siteConfig = {
     { name: 'Founder name', title: 'Co-founder', linkedinUrl: '#' },
   ],
   copy: {
-    heroDescription: 'A friendly online networking series\nfor curious minds, diverse perspectives\nand meaningful connections.',
-    howIntro: 'Grape brings together professionals\nfrom different backgrounds for\nsmall group conversations, designed\nto spark ideas, share experiences\nand build real connections.',
+    heroDescription: 'Free online business networking events bringing Australian professionals together for meaningful conversations in small, rotating groups.',
+    howIntro: 'Grape connects Australian professionals through online networking sessions. Meet new people in small breakout rooms, rotate between groups and build connections beyond your usual circles.',
   },
 }
