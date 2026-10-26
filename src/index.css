@@ -51,7 +51,7 @@ h2 { margin: 12px 0 22px; color:#321022; font-size: 51px; line-height: .98; lett
 .steps { display:grid; grid-template-columns:repeat(3,1fr); gap:30px; }
 .step { position:relative; padding-top: 0; }
 .step-number { position:absolute; top:-2px; left:2px; width:43px; height:43px; background:#f5a6e8; display:grid; place-items:center; border-radius:50%; font-size:20px; font-weight:900; z-index:2; }
-.step-art { width:100%; height:175px; background-image:url('/illustrations/how-it-works.png'); background-repeat:no-repeat; background-size:300% 100%; }
+.step-art { width:100%; aspect-ratio:1 / 1; background-image:url('/illustrations/how-it-works.png'); background-repeat:no-repeat; background-size:300% 100%; }
 .step-art.left { background-position:left center; }
 .step-art.center { background-position:center center; }
 .step-art.right { background-position:right center; }
@@ -125,7 +125,7 @@ footer > a { font-weight:800; color:#7b103b; }
   .steps { grid-template-columns:1fr; gap:44px; }
   .step { display:grid; grid-template-columns:43% 57%; grid-template-rows:auto auto; align-items:end; column-gap:18px; }
   .step-number { top:5px; }
-  .step-art { grid-row:1/3; height:155px; }
+  .step-art { grid-row:1/3; }
   .step h3 { align-self:end; margin:0 0 7px; }
   .step p { align-self:start; }
   .about { padding:85px 0 95px; grid-template-columns:1fr; gap:42px; }
@@ -143,7 +143,6 @@ footer > a { font-weight:800; color:#7b103b; }
   .event-button { font-size:17px; padding:16px 20px; }
   .steps { gap:52px; }
   .step { display:block; padding-left:0; }
-  .step-art { height:180px; }
   .step-number { top:-2px; }
   .step h3 { margin-top:8px; }
   .founders { grid-template-columns:1fr; }
