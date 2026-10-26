@@ -1,8 +1,18 @@
 export const siteConfig = {
   lumaEventsUrl: '#upcoming-events',
   founders: [
-    { name: 'Founder name', title: 'Co-founder', linkedinUrl: '#' },
-    { name: 'Founder name', title: 'Co-founder', linkedinUrl: '#' },
+    {
+      name: 'Beth Croft',
+      title: 'Co-founder',
+      image: '/founders/beth-croft.png',
+      linkedinUrl: 'https://www.linkedin.com/in/beth-croft-b57baa113/',
+    },
+    {
+      name: 'Manoj Vadavat',
+      title: 'Co-founder',
+      image: '/founders/manoj-vadavat.png',
+      linkedinUrl: 'https://www.linkedin.com/in/manojvadavat/',
+    },
   ],
   copy: {
     heroDescription: 'Free online business networking events bringing Australian professionals together for meaningful conversations in small, rotating groups.',

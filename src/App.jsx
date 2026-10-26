@@ -127,9 +127,11 @@ function App() {
           <div className="founders" aria-label="Grape founders">
             {siteConfig.founders.map((founder, index) => (
               <article className="founder-card" key={index}>
-                <div className="founder-photo" aria-label="Founder photo placeholder"><span>Photo<br />coming soon</span></div>
+                <div className="founder-photo">
+                  <img src={founder.image} alt={`${founder.name}, ${founder.title} of Grape`} />
+                </div>
                 <div><h3>{founder.name}</h3><p>{founder.title}</p></div>
-                <a href={founder.linkedinUrl} onClick={(e) => founder.linkedinUrl === '#' && e.preventDefault()} aria-label={`LinkedIn profile for ${founder.name}`}>in</a>
+                <a href={founder.linkedinUrl} target="_blank" rel="noreferrer" aria-label={`LinkedIn profile for ${founder.name}`}>in</a>
               </article>
             ))}
           </div>
