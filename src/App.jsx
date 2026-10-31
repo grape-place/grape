@@ -94,7 +94,7 @@ function App() {
             </div>
           </div>
           <div className="hero-visual">
-            <img src="/illustrations/hero-laptop.png" alt="A colourful illustrated laptop showing twelve diverse people in a friendly video call" />
+            <img src="/illustrations/hero-laptop.png" alt="Twelve professionals meeting in a friendly online video call" />
           </div>
         </section>
 
