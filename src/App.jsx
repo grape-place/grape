@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react'
 import { siteConfig } from './config'
 
 const steps = [
-  { title: 'Register', body: 'Choose a free online networking event and register.', position: 'left' },
-  { title: 'Connect', body: 'Meet others per breakout room, then rotate into new groups.', position: 'center' },
-  { title: 'Continue', body: 'Stay in touch and grow your network beyond the event.', position: 'right' },
+  { title: 'Register', body: "Choose an online networking session you'd like to attend.", image: '/illustrations/register.png' },
+  { title: 'Connect', body: 'Meet others in small breakout rooms, then rotate to meet more people.', image: '/illustrations/connect.png' },
+  { title: 'Continue', body: 'Stay in touch and grow your network beyond the event.', image: '/illustrations/continue.png' },
 ]
 
 function Logo() {
@@ -109,7 +109,7 @@ function App() {
               {steps.map((step, index) => (
                 <article className="step" key={step.title}>
                   <span className="step-number">{index + 1}</span>
-                  <div className={`step-art ${step.position}`} role="img" aria-label={`Illustration for ${step.title}: ${step.body}`} />
+                  <img className="step-art" src={step.image} alt={`${step.title}: ${step.body}`} />
                   <h3>{step.title}</h3>
                   <p>{step.body}</p>
                 </article>
