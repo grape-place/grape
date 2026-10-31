@@ -81,6 +81,7 @@ footer { min-height:150px; display:flex; align-items:center; justify-content:spa
 footer .logo { transform:scale(.7) rotate(-3deg); transform-origin:left center; }
 footer p { font-family:Caveat,cursive; font-size:22px; }
 footer > a { font-weight:800; color:#7b103b; }
+.made-with-love { margin:0; padding:0 16px 28px; color:#7b103b; text-align:center; font-size:14px; font-weight:800; letter-spacing:.2px; }
 .toast { position:fixed; right:24px; bottom:24px; z-index:50; background:#321022; color:white; padding:16px 22px; border-radius:14px; box-shadow:0 12px 40px #0003; font-weight:800; animation:pop .25s ease-out; }
 @keyframes pop { from { opacity:0; transform:translateY(10px) scale(.96); } }
 

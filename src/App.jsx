@@ -165,6 +165,7 @@ function App() {
       </main>
 
       <footer className="page-shell"><Logo /><p>Good conversations. Great connections.</p><a href="#top">Back to top ↑</a></footer>
+      <p className="made-with-love">Made with ❤️ in Australia 🦘🐨🇦🇺</p>
       {notice && <div className="toast" role="status">New event dates are coming soon.</div>}
     </div>
   )
