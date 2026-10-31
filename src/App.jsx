@@ -10,8 +10,7 @@ const steps = [
 function Logo() {
   return (
     <a href="#top" className="logo" aria-label="Grape — back to top">
-      <span>grape</span>
-      <i aria-hidden="true"><b /><b /><b /></i>
+      <img src="/brand/grape-logo.png" alt="Grape" />
     </a>
   )
 }
