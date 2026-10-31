@@ -26,6 +26,8 @@ nav > :is(a, button):not(.event-button):hover::after { right:0; }
 .menu-button { display:none; }
 .event-button { width: fit-content; border: 0; border-radius: 999px; background: #8a0e3f; color: white; display: flex; align-items: center; justify-content: center; gap: 22px; padding: 18px 28px; font-weight: 800; font-size: 21px; line-height: 1; text-decoration: none; cursor: pointer; box-shadow: 0 8px 0 rgba(72, 4, 34, .05); transition: transform .2s, background .2s; }
 .event-button:hover { background: #68102f; transform: translateY(-2px); }
+.event-button[aria-disabled="true"] { cursor:default; box-shadow:none; }
+.event-button[aria-disabled="true"]:hover { background:#8a0e3f; transform:none; }
 .event-button svg { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .event-button.compact { padding: 15px 26px; font-size: 16px; gap: 15px; }
 .event-button.compact svg { width: 18px; }
@@ -79,8 +81,6 @@ footer .logo { transform:scale(.7) rotate(-3deg); transform-origin:left center; 
 footer p { font-family:Caveat,cursive; font-size:22px; }
 footer > a { font-weight:800; color:#7b103b; }
 .made-with-love { margin:0; padding:0 16px 28px; color:#7b103b; text-align:center; font-size:14px; font-weight:800; letter-spacing:.2px; }
-.toast { position:fixed; right:24px; bottom:24px; z-index:50; background:#321022; color:white; padding:16px 22px; border-radius:14px; box-shadow:0 12px 40px #0003; font-weight:800; animation:pop .25s ease-out; }
-@keyframes pop { from { opacity:0; transform:translateY(10px) scale(.96); } }
 
 @media (max-width: 1050px) {
   .site-header { height:110px; }

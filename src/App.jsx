@@ -20,17 +20,11 @@ function ArrowIcon() {
   return <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M6 18 18 6M9 6h9v9" /></svg>
 }
 
-function EventButton({ compact = false, onComingSoon }) {
-  const handleClick = (event) => {
-    if (siteConfig.lumaEventsUrl.startsWith('#')) {
-      event.preventDefault()
-      onComingSoon?.()
-    }
-  }
+function EventButton({ compact = false }) {
   return (
-    <a className={`event-button ${compact ? 'compact' : ''}`} href={siteConfig.lumaEventsUrl} target="_blank" rel="noreferrer" onClick={handleClick}>
-      See upcoming events <ArrowIcon />
-    </a>
+    <span className={`event-button ${compact ? 'compact' : ''}`} aria-disabled="true">
+      Events coming soon!
+    </span>
   )
 }
 
@@ -44,11 +38,6 @@ function Doodles() {
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false)
-  const [notice, setNotice] = useState(false)
-  const showNotice = () => {
-    setNotice(true)
-    window.setTimeout(() => setNotice(false), 3600)
-  }
 
   useEffect(() => {
     const initialiseTally = () => window.Tally?.loadEmbeds?.()
@@ -76,7 +65,7 @@ function App() {
             data-tally-emoji-animation="wave"
             onClick={() => setMenuOpen(false)}
           >Contact</button>
-          <EventButton compact onComingSoon={showNotice} />
+          <EventButton compact />
         </nav>
       </header>
 
@@ -86,7 +75,7 @@ function App() {
           <div className="hero-copy">
             <h1 id="hero-heading">Good<br />conversations.<br />Great<br />connections.</h1>
             <p>{siteConfig.copy.heroDescription}</p>
-            <EventButton onComingSoon={showNotice} />
+            <EventButton />
             <div className="event-note">
               <svg viewBox="0 0 60 56" aria-hidden="true"><path d="M52 46C22 49 13 35 16 13M16 13l-8 12M16 13l7 12" /></svg>
               <span>networking sessions<br />through the year</span>
@@ -166,7 +155,6 @@ function App() {
 
       <footer className="page-shell"><Logo /><p>Good conversations. Great connections.</p><a href="#top">Back to top ↑</a></footer>
       <p className="made-with-love">Made with ❤️ in Australia 🦘🐨🇦🇺</p>
-      {notice && <div className="toast" role="status">New event dates are coming soon.</div>}
     </div>
   )
 }

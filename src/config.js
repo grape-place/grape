@@ -1,5 +1,4 @@
 export const siteConfig = {
-  lumaEventsUrl: 'https://luma.com',
   founders: [
     {
       name: 'Beth Croft',
