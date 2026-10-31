@@ -122,7 +122,7 @@ function App() {
           <div className="about-copy">
             <span className="eyebrow">Meet with meaning</span>
             <h2 id="about-heading">Networking that feels like a good conversation.</h2>
-            <p>No travel, crowded rooms or awkward introductions. Join from anywhere in Australia and meet professionals in small, facilitated breakout rooms. Rotate between groups, share experiences and make meaningful connections — all in just one hour.</p>
+            <p>No travel, crowded rooms or awkward introductions. Join from anywhere and meet professionals in small, facilitated breakout rooms. Rotate between groups, share experiences and make meaningful connections — all in just one hour.</p>
           </div>
           <div className="founders-wrap">
             <h3>Your Hosts</h3>
